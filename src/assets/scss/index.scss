@@ -1,0 +1,114 @@
+@import './variables';
+@import './components/container';
+@import './components/page';
+@import './components/nav';
+@import './components/modal';
+
+@import './vue-animations';
+@import './modificators';
+
+html, body{
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+body{
+  background: #eeeeee;
+  margin:0;
+  overflow:hidden;
+}
+
+#app{
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-scrollbar{
+  height: 100%;
+  &__wrap{
+    overflow-x: hidden;
+  }
+}
+
+.chart__handle{
+  cursor:move;
+}
+
+
+
+.btn-add-chart{
+  /*width: 40px;
+  height: 40px;*/
+  // background:red;
+  // border-radius: 100px !important;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  cursor: pointer;
+    // padding: 15px !important;
+}
+
+.el-popup-parent--hidden{
+  .btn-add-chart{
+    right: 60px;
+  }
+}
+
+.el-menu-item_right{
+  float: right;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+
+}
+
+.chart-ghost {
+  opacity: 0.5;
+}
+
+.chart-container{
+  padding: 10px;
+}
+
+.el-card__header {
+  padding: 10px 20px;
+  i{
+    font-size: 18px;
+  }
+}
+
+.el-header{
+  background-color: $--color-primary;
+  color:white;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  
+}
+
+// .dropdown-split {
+//   padding-left: 0;
+//   padding-top: 0;
+//   padding-bottom: 0;
+// }
+
+.controls {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+

@@ -1,0 +1,8 @@
+{
+  "port": 3000,
+  "host":"localhost",
+  "middlewares":[
+    "src/server/middlewares/auth.js"
+  ],
+  "watch ":"src/server/db.json"
+}
