@@ -64,6 +64,14 @@ export default {
         return [];
       },
     },
+    'hasLabels':{
+      type:Boolean,
+      default:false,
+    },
+    'hasDataLabels':{
+      type:Boolean,
+      default:false,
+    },
     'hasLegend':{
       type:Boolean,
       default:false,
@@ -90,7 +98,7 @@ export default {
             defaultLocale:"ru",
           },
           dataLabels:{
-            enabled:false
+            //enabled:false
           },
           title: {
             align: 'left'
@@ -114,7 +122,9 @@ export default {
           labels: this.labels,
           hasLegend:this.hasLegend,
           legendPosition:this.legendPosition,
-          title:this.title
+          title:this.title,
+          hasLabels:this.hasLabels,
+          hasDataLabels:this.hasDataLabels
         }
       }, debounce((newValue, oldValue) => {
         this.updateChart();
@@ -147,11 +157,23 @@ export default {
               position:this.legendPosition
           },
           labels: this.labels,
+          dataLabels:{
+            enabled:this.hasDataLabels,
+          },
           title:{
             text: this.title,
           },
           xaxis: {
               categories: this.labels,
+              labels:{
+                show:this.hasLabels
+              }
+          },
+          yaxis: {
+              //categories: this.labels,
+              labels:{
+                show:this.hasLabels
+              }
           },
         };
       },

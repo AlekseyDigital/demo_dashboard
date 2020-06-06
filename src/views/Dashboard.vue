@@ -7,35 +7,37 @@
     </div>
     <el-row v-else-if="diagrams.length">
       <VueDraggable
-        class="el-row"
-        v-model="diagrams"
-        draggable=".chart-container"
-        handle=".chart__handle"
-        ghost-class="chart-ghost"
-        @update="onUpdateDiagramSorting">
+                    class="el-row"
+                    v-model="diagrams"
+                    draggable=".chart-container"
+                    handle=".chart__handle"
+                    ghost-class="chart-ghost"
+                    @update="onUpdateDiagramSorting">
         <transition-group
-          type="transition"
-          name="flip-list">
+                          type="transition"
+                          name="flip-list">
           <el-col
-            v-for="item of diagrams"
-            :key="item.id"
-            class="chart-container"
-            :span="12"
-            :xs="24"
-            :sm="24"
-            :md="12"
-            :lg="8"
-            :xl="6">
+                  v-for="item of diagrams"
+                  :key="item.id"
+                  class="chart-container"
+                  :span="12"
+                  :xs="24"
+                  :sm="24"
+                  :md="12"
+                  :lg="8"
+                  :xl="6">
             <VueChartBlock
-              :id="item.id"
-              :type="item.type"
-              :title="item.name"
-              :datasets="getDatasets(item.resourceId)"
-              :labels="getLabels(item.resourceId)"
-              :has-legend="item.hasLegend"
-              :legend-position="item.legendPosition"
-              @delete-chart="deleteDiagram"
-              @edit-chart="toEditDiagram">
+                            :id="item.id"
+                            :type="item.type"
+                            :title="item.name"
+                            :datasets="getDatasets(item.resourceId)"
+                            :labels="getLabels(item.resourceId)"
+                            :has-legend="item.hasLegend"
+                            :legend-position="item.legendPosition"
+                            :has-labels="item.hasLabels"
+                            :has-data-labels="item.hasDataLabels"
+                            @delete-chart="deleteDiagram"
+                            @edit-chart="toEditDiagram">
             </VueChartBlock>
           </el-col>
         </transition-group>

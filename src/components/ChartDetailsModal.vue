@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
     <div class="modal__header">
-      {{modalTitle}}
+      <h2>{{modalTitle}}</h2>
       <a class="modal__headerbtn"
           @click="closeModal">
         <i class="el-icon el-icon-close"></i>
@@ -60,6 +60,15 @@
             </el-option>
           </el-select>
         </el-form-item>
+        <el-form-item v-show="isTypeWithCoordinateGrid"
+                      label="Показать подписи"
+                      :label-width="formLabelWidth">
+          <el-switch v-model="form.hasLabels"></el-switch>
+        </el-form-item>
+        <el-form-item label="Показать подписи данных"
+                      :label-width="formLabelWidth">
+          <el-switch v-model="form.hasDataLabels"></el-switch>
+        </el-form-item>
       </el-form>
     </div>
 
@@ -114,6 +123,17 @@ export default {
     },
     savingBtnText(){
       return this.isNew ? 'Создать' : 'Сохранить';
+    },
+    isTypeWithCoordinateGrid(){
+      return this.form.type === allowedTypes.line.id
+                            || this.form.type === allowedTypes.area.id
+                            || this.form.type === allowedTypes.bar.id;
+    }
+  },
+  watch:{
+    isTypeWithCoordinateGrid(value){
+      if(value === false)
+        this.form.hasLabels = false;
     }
   },
   methods: {
@@ -134,6 +154,8 @@ export default {
           resourceId: null,
           hasLegend: true,
           legendPosition: 'left',
+          hasLabels:true,
+          hasDataLabels:true,
           order: 1,
           user:this.currentUser.id
         };

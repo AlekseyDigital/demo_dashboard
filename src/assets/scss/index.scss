@@ -33,18 +33,22 @@ body{
   cursor:move;
 }
 
+label{
+  word-break: break-word;
+  line-height: 24px;
+}
+
+.el-form-item__label{
+  line-height: 24px;
+}
+
 
 
 .btn-add-chart{
-  /*width: 40px;
-  height: 40px;*/
-  // background:red;
-  // border-radius: 100px !important;
   position: fixed;
   bottom: 45px;
   right: 45px;
   cursor: pointer;
-    // padding: 15px !important;
 }
 
 .el-popup-parent--hidden{
@@ -55,15 +59,6 @@ body{
 
 .el-menu-item_right{
   float: right;
-}
-
-.row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col{
-
 }
 
 .chart-ghost {
@@ -94,15 +89,6 @@ body{
 //   padding-top: 0;
 //   padding-bottom: 0;
 // }
-
-.controls {
-  padding-top: 0;
-  padding-bottom: 20px;
-}
-
-.field {
-  margin-bottom: 20px;
-}
 
 
 
