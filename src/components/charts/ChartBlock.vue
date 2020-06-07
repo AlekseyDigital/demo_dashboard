@@ -39,7 +39,7 @@ export default {
   name:'ChartBlock',
   props:{
     'id':{
-      type:String,
+      type:[String,Number],
       required:true,
     },
     'type':{
@@ -97,6 +97,7 @@ export default {
             locales:[ruLocale],
             defaultLocale:"ru",
           },
+          colors:['#61d2c1',	'#5884e4',	'#2578dc',	'#41dccd', '#41dc68', '#8cdc41', '#bedc41', '#ffeb3b'],//'#7957D5', 41abdc
           dataLabels:{
             //enabled:false
           },

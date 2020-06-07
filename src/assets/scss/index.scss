@@ -38,17 +38,13 @@ label{
   line-height: 24px;
 }
 
-.el-form-item__label{
-  line-height: 24px;
-}
-
-
-
 .btn-add-chart{
   position: fixed;
   bottom: 45px;
   right: 45px;
   cursor: pointer;
+  padding: 16px !important;
+  font-size: 18px;
 }
 
 .el-popup-parent--hidden{

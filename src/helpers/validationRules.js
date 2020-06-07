@@ -24,3 +24,10 @@ export const rulesLoginForm = {
     }
   ],
 }
+
+export const rulesDashboardForm = {
+  name: [
+    { required: true, message: 'Укажите название панели', trigger: 'blur' },
+    { min: 3, message: 'Количество символов должно быть больше 3', trigger: 'blur' }
+  ],
+}

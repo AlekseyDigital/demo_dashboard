@@ -11,90 +11,131 @@
       "password": "123456"
     }
   ],
+  "dashboards": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Панель 1",
+      "filterByDate": 1,
+      "period": null
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Панель 2",
+      "filterByDate": 1,
+      "period": null
+    },
+    {
+      "id": 4,
+      "name": "Панель 1",
+      "userId": 2
+    }
+  ],
   "diagrams": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Доля windows 10 и windows 7 в мире за 2019 год",
       "type": "line",
       "resourceId": 3,
       "order": 3,
-      "user": 1,
+      "userId": 1,
       "hasLegend": true,
       "hasLabels": true,
       "hasDataLabels": false,
-      "legendPosition": "bottom"
+      "legendPosition": "bottom",
+      "dashboardId": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Стоимость нефти Брент за 2019 год",
       "type": "area",
       "resourceId": 2,
       "order": 2,
-      "user": 1,
+      "userId": 1,
       "hasLegend": false,
       "hasLabels": false,
       "hasDataLabels": false,
-      "legendPosition": "left"
+      "legendPosition": "left",
+      "dashboardId": 1
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Стоимость нефти Брент за 2019 год",
       "type": "bar",
       "resourceId": 2,
-      "order": 6,
-      "user": 1,
+      "order": 7,
+      "userId": 1,
       "hasLegend": false,
       "hasLabels": true,
       "hasDataLabels": false,
-      "legendPosition": "left"
+      "legendPosition": "left",
+      "dashboardId": 1
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "ВВП стран мира за 2019 год (2)",
       "type": "pie",
       "resourceId": 1,
       "order": 4,
-      "user": 1,
+      "userId": 1,
       "hasLegend": false,
       "hasLabels": false,
       "hasDataLabels": false,
-      "legendPosition": "left"
+      "legendPosition": "left",
+      "dashboardId": 1
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "ВВП стран мира за 2019 год (1)",
       "type": "pie",
       "order": 1,
       "resourceId": 1,
-      "user": 1,
+      "userId": 1,
       "hasLegend": true,
       "hasLabels": false,
       "hasDataLabels": false,
-      "legendPosition": "left"
+      "legendPosition": "left",
+      "dashboardId": 1
     },
     {
-      "id": "555",
+      "id": 6,
       "name": "Доля windows 10 и windows 7 в мире за 2019 год",
       "type": "bar",
       "resourceId": 3,
-      "user": 1,
+      "userId": 1,
       "order": 5,
-      "hasLegend": true,
+      "hasLegend": false,
       "hasLabels": false,
       "hasDataLabels": false,
-      "legendPosition": "bottom"
+      "legendPosition": "bottom",
+      "dashboardId": 1
     },
     {
-      "id": "557",
+      "id": 7,
       "name": "Доля windows 10 и windows 7 в мире за 2019 год",
       "type": "area",
       "resourceId": 3,
-      "user": 1,
-      "order": 7,
+      "userId": 1,
+      "order": 6,
       "hasLegend": true,
       "hasLabels": false,
       "hasDataLabels": false,
-      "legendPosition": "bottom"
+      "legendPosition": "bottom",
+      "dashboardId": 1
+    },
+    {
+      "id": 8,
+      "name": "gtt",
+      "type": "line",
+      "resourceId": 1,
+      "hasLegend": true,
+      "legendPosition": "left",
+      "hasLabels": true,
+      "hasDataLabels": true,
+      "order": 1,
+      "userId": 1,
+      "dashboard": 3
     }
   ],
   "statistics": [

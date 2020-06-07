@@ -17,9 +17,10 @@
           </el-form-item>
           <el-form-item label="Пароль" 
                       :label-width="formLabelWidth"
-                      type="password"
                       prop="password">
-            <el-input v-model="form.password" autocomplete="off">
+            <el-input v-model="form.password" 
+                      autocomplete="off"
+                      type="password">
               <i slot="prepend" class="el-icon-edit"></i>
             </el-input>
           </el-form-item>

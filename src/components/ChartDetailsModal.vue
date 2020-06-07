@@ -87,7 +87,7 @@ import { mapState } from 'vuex';
 import { rulesChartForm } from '@/helpers/validationRules.js';
 import { allowedTypes, allowedEndpoints } from '@/helpers/diagrams.js';
 export default {
-  name: 'FormChartDetails',
+  name: 'ChartDetailsModal',
   props: {
     'diagram': {
       type: Object,
@@ -157,7 +157,7 @@ export default {
           hasLabels:true,
           hasDataLabels:true,
           order: 1,
-          user:this.currentUser.id
+          userId:this.currentUser.id
         };
       }
       this.form = result;

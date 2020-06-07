@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <LayoutBase>
+    <LayoutBase v-if="initialized">
             <router-view />
     </LayoutBase>
   </div>
@@ -13,8 +13,14 @@ export default {
   components: {
     LayoutBase,
   },
-  created() {
-    this.$store.dispatch('auth/CheckToken');
+  data(){
+    return {
+      initialized:false
+    }
+  },
+  async created() {
+    await this.$store.dispatch('auth/CheckToken');
+    this.initialized = true;
   }
 };
 </script>
